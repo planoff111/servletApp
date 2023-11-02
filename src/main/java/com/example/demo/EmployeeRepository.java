@@ -36,8 +36,7 @@ public final class EmployeeRepository {
 
     public static int save(Employee employee) {
         int status = 0;
-        try {
-            Connection connection = EmployeeRepository.getConnection();
+        try (Connection connection = EmployeeRepository.getConnection()){
             PreparedStatement ps = connection.prepareStatement("insert into users(name,email,country) values (?,?,?)");
             ps.setString(1, employee.name());
             ps.setString(2, employee.email());
