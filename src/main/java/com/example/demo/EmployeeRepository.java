@@ -19,7 +19,7 @@ public final class EmployeeRepository {
         Connection connection = null;
         String url = "jdbc:postgresql://localhost:5432/employee";
         String user = "postgres";
-        String password = "postgres";
+        String password = "123456";
 
         try {
             connection = DriverManager.getConnection(url, user, password);

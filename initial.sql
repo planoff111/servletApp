@@ -1,7 +1,12 @@
-CREATE TABLE if not exists users
+DROP DATABASE Employee;
+
+CREATE DATABASE Employee;
+
+CREATE TABLE if not exists public.users
 (
-    id      Serial primary key,
-    name    VARCHAR(255),
-    email   VARCHAR(255),
-    country VARCHAR(255)
+    id      serial
+        primary key,
+    name    varchar(255),
+    email   varchar(255),
+    country varchar(255)
 );
