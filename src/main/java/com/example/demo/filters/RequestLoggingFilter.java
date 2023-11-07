@@ -41,8 +41,5 @@ public class RequestLoggingFilter implements Filter {
         chain.doFilter(request, response);
     }
 
-    public void destroy() {
-    }
-
 }
 
